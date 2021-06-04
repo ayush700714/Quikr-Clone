@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.models;
 
 public class Comment {
     private String name,comment;

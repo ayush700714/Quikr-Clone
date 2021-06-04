@@ -15,7 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +29,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.SetOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -41,7 +39,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-public class AddNewPost extends AppCompatActivity {
+public class AddNewPostActivity extends AppCompatActivity {
 
     TextView tvTitle;
     private static final int PICK_IMAGE_REQUEST = 234;
@@ -93,7 +91,7 @@ public class AddNewPost extends AppCompatActivity {
         String[] type = new String[] {"Books", "Electronics", "Vehicle", "Cosmetics"};
         ArrayAdapter<String> adapter =
                 new ArrayAdapter<>(
-                        AddNewPost.this,
+                        AddNewPostActivity.this,
                         R.layout.list_item,
                         type);
 
@@ -116,7 +114,7 @@ public class AddNewPost extends AppCompatActivity {
             public void onClick(View v) {
                if(status==0)
                {
-                   Toast.makeText(AddNewPost.this,"PLease select image to upload",Toast.LENGTH_SHORT).show();
+                   Toast.makeText(AddNewPostActivity.this,"PLease select image to upload",Toast.LENGTH_SHORT).show();
                }
                else
                {
@@ -198,7 +196,7 @@ public class AddNewPost extends AppCompatActivity {
                                                     public void onComplete(@NonNull Task<DocumentReference> task) {
                                                         if(task.isSuccessful())
                                                         {
-                                                            Intent intent = new Intent(AddNewPost.this,MainActivity.class);
+                                                            Intent intent = new Intent(AddNewPostActivity.this,MainActivity.class);
                                                             startActivity(intent);
                                                             finish();
                                                         }

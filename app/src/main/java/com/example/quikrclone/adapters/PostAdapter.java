@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.quikrclone.CommentActivity;
+import com.example.quikrclone.models.Post;
+import com.example.quikrclone.R;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;

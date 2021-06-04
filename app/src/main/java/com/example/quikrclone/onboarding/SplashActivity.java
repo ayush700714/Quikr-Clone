@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.onboarding;
 
 
 
@@ -8,6 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+
+import com.example.quikrclone.MainActivity;
+import com.example.quikrclone.R;
 
 
 public class SplashActivity extends AppCompatActivity {

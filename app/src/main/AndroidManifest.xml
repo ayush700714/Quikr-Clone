@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuikrClone">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".onboarding.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,15 +19,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".CommentActivity" />
-        <activity android:name=".AddNewPost" />
+        <activity android:name=".AddNewPostActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".onboarding.LoginActivity">
 
         </activity>
-        <activity android:name=".OtpActivity" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".SignUp2" />
-        <activity android:name=".Signup3" />
+        <activity android:name=".onboarding.OtpActivity" />
+        <activity android:name=".onboarding.SignUpActivity" />
+        <activity android:name=".onboarding.SignUp2Activity" />
+        <activity android:name=".onboarding.Signup3Activity" />
     </application>
 
 </manifest>

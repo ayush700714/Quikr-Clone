@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.onboarding;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.quikrclone.MainActivity;
+import com.example.quikrclone.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -28,7 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-public class SignUp2 extends AppCompatActivity {
+public class SignUp2Activity extends AppCompatActivity {
 
 
     int flag=0;
@@ -112,7 +114,7 @@ public class SignUp2 extends AppCompatActivity {
                 new android.os.Handler().postDelayed(
                         new Runnable() {
                             public void run() {
-                                Intent otpIntent = new Intent(SignUp2.this, Signup3.class);
+                                Intent otpIntent = new Intent(SignUp2Activity.this, Signup3Activity.class);
                                 otpIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 otpIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 otpIntent.putExtra("name",name);
@@ -139,7 +141,7 @@ public class SignUp2 extends AppCompatActivity {
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(SignUp2.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(SignUp2Activity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -171,7 +173,7 @@ public class SignUp2 extends AppCompatActivity {
     }
 
     private void sendUserToHome() {
-        Intent homeIntent = new Intent(SignUp2.this, MainActivity.class);
+        Intent homeIntent = new Intent(SignUp2Activity.this, MainActivity.class);
         homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         homeIntent.putExtra("phone",mPhoneNumber.getText().toString().trim());
@@ -209,7 +211,7 @@ public class SignUp2 extends AppCompatActivity {
                     complete_phone_number,
                     60,
                     TimeUnit.SECONDS,
-                    SignUp2.this,
+                    SignUp2Activity.this,
                     mCallbacks
             );
         }

@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.models;
 
 import androidx.annotation.NonNull;
 

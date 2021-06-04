@@ -1,8 +1,8 @@
-package com.example.quikrclone;
+package com.example.quikrclone.models;
 
 import java.util.Date;
 
-public class Post extends BlogPostId{
+public class Post extends com.example.quikrclone.models.BlogPostId {
     private String title,desc,imageUrl,category,userName;
     private Date time_stamp;
 

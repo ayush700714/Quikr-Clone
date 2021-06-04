@@ -1,6 +1,5 @@
 package com.example.quikrclone;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,15 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.appbar.MaterialToolbar;
+import com.example.quikrclone.adapters.PostAdapter;
+import com.example.quikrclone.models.Post;
+import com.example.quikrclone.onboarding.LoginActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvTitle;
     private FirebaseAuth mAuth;
+    private ImageView logOut;
     private FirebaseUser mCurrentUser;
     private FloatingActionButton floatingActionButton;
     @Override
@@ -52,18 +50,22 @@ public class MainActivity extends AppCompatActivity {
             sendUserToLogin();
         }
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
-        toolbar.inflateMenu(R.menu.options_menu);
 
         tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText("Quikr");
+        logOut = findViewById(R.id.logOut);
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                sendUserToLogin();
+            }
+        });
         floatingActionButton = findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,AddNewPost.class);
+                Intent intent = new Intent(MainActivity.this, AddNewPostActivity.class);
                 startActivity(intent);
             }
         });
@@ -100,22 +102,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(loginIntent);
         finish();
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.options_menu,menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        super.onOptionsItemSelected(item);
-
-        if(item.getItemId()==R.id.log_out)
-        {
-            mAuth.signOut();
-            sendUserToLogin();
-        }
-        return true;
-    }
 }

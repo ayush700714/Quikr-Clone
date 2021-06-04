@@ -1,4 +1,4 @@
-package com.example.quikrclone;
+package com.example.quikrclone.onboarding;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.quikrclone.MainActivity;
+import com.example.quikrclone.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -25,7 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Signup3 extends AppCompatActivity {
+public class Signup3Activity extends AppCompatActivity {
     String name,age,phone;
     private FirebaseAuth mAuth;
     private FirebaseUser mCurrentUser;
@@ -90,7 +92,7 @@ public class Signup3 extends AppCompatActivity {
 
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(Signup3.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(Signup3Activity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
@@ -131,7 +133,7 @@ public class Signup3 extends AppCompatActivity {
     }
 
     public void sendUserToHome() {
-        Intent homeIntent = new Intent(Signup3.this, MainActivity.class);
+        Intent homeIntent = new Intent(Signup3Activity.this, MainActivity.class);
         homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         homeIntent.putExtra("phone",phone);
