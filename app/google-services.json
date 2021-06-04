@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83028082986",
+    "project_id": "quikr-clone",
+    "storage_bucket": "quikr-clone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83028082986:android:ee0a0ce2c4fa242031de53",
+        "android_client_info": {
+          "package_name": "com.example.quikrclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83028082986-nmoktd2v5qldg7e41a0330ap2shvblol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAJHKZJFzyorU60STOhl4QOLbZt7JzaLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83028082986-nmoktd2v5qldg7e41a0330ap2shvblol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

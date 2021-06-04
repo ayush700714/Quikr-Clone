@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUp">
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26.7dp"
+        android:layout_marginLeft="26.7dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginRight="16.7dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:includeFontPadding="false"
+            android:text="SignUp to Create Account"
+            android:textColor="@color/black_25303c"
+            android:textSize="21.7sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.7dp"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:text="To sell your products"
+            android:textColor="@color/grey_828990"
+            android:textSize="15sp" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33.3dp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:includeFontPadding="false"
+            android:text="Enter Details"
+            android:textColor="@color/black_25303c"
+            android:textSize="21.7sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            app:boxStrokeColor="@color/colorPrimary"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:hintTextColor="#000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:drawableStart="@drawable/ic_user_name"
+                android:id="@+id/name"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black_25303c"
+                android:textColorHint="@color/grey_828990"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            app:boxStrokeColor="@color/colorPrimary"
+            android:textColorHint="#9E9E9E"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:hintTextColor="#000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:ems="3"
+                android:inputType="number"
+                android:drawableStart="@drawable/ic_user_name"
+                android:id="@+id/age"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black_25303c"
+                android:textColorHint="@color/grey_828990"
+                android:textSize="15sp"
+                android:fontFamily="@font/open_sans_semibold"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continue_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout"
+        android:layout_marginStart="16.7dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16.7dp"
+        android:layout_marginBottom="10.7dp"
+        android:background="@drawable/dark_green_rect"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:includeFontPadding="false"
+        android:text="COntinue"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:includeFontPadding="false"
+            android:text="Already have an account?"
+            android:textColor="@color/black_25303c"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/already_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="Login Here"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

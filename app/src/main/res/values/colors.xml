@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="lightGray">#F2F2F2</color>
+    <color name="disabledBtnBg">#999999</color>
+
+    <color name="grey_828990">#828990</color>
+
+    <color name="black_25303c">#25303c</color>
+    <color name="green_15d1a4">#15d1a4</color>
+    <color name="red_ff577f">#ff577f</color>
+    <color name="viewLine">#50acacac</color>
+    <color name="bg_fafafa">#fafafa</color>
+    <color name="gray_cdcdcd">#cdcdcd</color>
+    <color name="gray_f5f6fa">#f5f6fa</color>
+    <color name="transparent">#00000000</color>
+    <color name="border_d1d1d1">#d1d1d1</color>
+    <color name="pink_ffecf0">#ffecf0</color>
+    <color name="skyblue_dcf2f0">#dcf2f0</color>
+    <color name="light_blue_e9f0f8">#e9f0f8</color>
+    <color name="lightorange_faf1e8">#faf1e8</color>
+    <color name="linecolor_fafafa">#fafafa</color>
+
+    <color name="colorPrimary">@color/green_15d1a4</color>
+    <color name="colorPrimaryDark">@color/green_15d1a4</color>
+</resources>
